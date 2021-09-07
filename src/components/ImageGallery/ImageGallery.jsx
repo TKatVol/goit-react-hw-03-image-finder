@@ -98,7 +98,7 @@ export class ImageGallery extends Component {
      
         return (
             <div className={s.container}>
-                {loading && <Loader type="Hearts" color="#3f51b5" height={80} width={80} className={s.loader} />}
+                
                 
                 <ul className={s.ImageGallery}  onClick={this.handleImageClick}>
                     {gallery && gallery.map(hits => {
@@ -106,6 +106,8 @@ export class ImageGallery extends Component {
                         })
                     }
                 </ul>
+
+                {loading && <Loader type="Hearts" color="#3f51b5" height={80} width={80} className={s.loader} />}
 
                 {totalImages > 12 && <Button title="Load more" onClick={this.handleLoadMoreButtonClick} />}
                 
